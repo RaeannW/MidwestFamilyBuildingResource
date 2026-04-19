@@ -1,0 +1,31 @@
+.page {
+  background-color: var(--color-warm-cream);
+  text-align: center;
+  padding: 3rem;
+}
+
+.eyebrow {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-orange);
+}
+
+.space {
+  margin: 1rem;
+}
+
+.buttonSpace {
+  margin: 3rem;
+}
+
+.homeHeading {
+  font-size: 56px;
+  line-height: 110%;
+  font-weight: 800;
+  margin: 0 auto;
+}
+
+.accent {
+  color: var(--color-orange);
+  font-style: italic;
+}
