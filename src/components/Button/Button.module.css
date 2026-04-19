@@ -5,7 +5,7 @@
   transition: all 0.15s ease;
   border: none;
   letter-spacing: 0.03em;
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
 }
 
 .primary {
@@ -34,7 +34,7 @@
 }
 
 .amber {
-  background: #f5a623;
+  background: var(--color-amber);
   color: var(--color-charcoal);
 }
 
@@ -43,24 +43,24 @@
   color: var(--color-white);
 }
 
-/* .small {
-  font-size: 0.75rem;
+.small {
+  font-size: var(--text-xs);
   padding: 0.5rem 1rem;
-} */
+}
 
 .medium {
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   padding: 0.625rem 1.25rem;
 }
 
 .large {
-  font-size: 1rem;
+  font-size: var(--text-base);
   padding: 0.875rem 1.75rem;
 }
 
 .nav {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
   padding: 0.5rem 1.25rem;
 }
 
