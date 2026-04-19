@@ -1,5 +1,12 @@
 import React from "react";
+import Container from "@/components/Container/Container";
 
 export default function page() {
-  return <div>Blog</div>;
+  return (
+    <div>
+      <Container>
+        <h1>Blog</h1>
+      </Container>
+    </div>
+  );
 }
