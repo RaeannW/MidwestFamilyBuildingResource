@@ -83,3 +83,34 @@ select,
 textarea {
   font-family: inherit;
 }
+
+.eyebrow {
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  color: var(--color-orange);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(232, 98, 42, 0.2) 0%,
+    rgba(232, 98, 42, 0.5) 100%
+  );
+  z-index: 1;
+  opacity: 50%;
+  pointer-events: none;
+}
