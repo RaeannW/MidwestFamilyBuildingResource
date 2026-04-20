@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className={styles.logoWrapper}>
             <Link href="/" onClick={closeAll}>
               <Image
-                src="/images/horizontalLogoDark.svg"
+                src="/images/logos/horizontalLogoDark.svg"
                 alt="Midwest Family Building Resource"
                 fill
                 style={{ objectFit: "contain" }}

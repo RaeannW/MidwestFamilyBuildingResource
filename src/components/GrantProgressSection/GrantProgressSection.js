@@ -22,7 +22,7 @@ export default function GrantProgressSection() {
       <Container>
         <div className={styles.grid}>
           <div className={styles.content}>
-            <p className={styles.eyebrow}>{grantSectionContent.eyebrow}</p>
+            <p className="eyebrow">{grantSectionContent.eyebrow}</p>
             <h2 className={styles.headline}>
               {grantSectionContent.headlineLine1}
               <br />

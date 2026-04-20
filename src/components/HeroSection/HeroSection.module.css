@@ -1,0 +1,39 @@
+.hero {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.headline {
+  font-size: var(--text-6xl);
+  line-height: 110%;
+  font-weight: var(--weight-extrabold);
+  margin-bottom: 1.5rem;
+}
+
+.accent {
+  color: var(--color-orange);
+  font-style: italic;
+}
+
+.subtext {
+  font-size: var(--text-lg);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
