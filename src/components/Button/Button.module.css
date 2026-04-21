@@ -6,6 +6,9 @@
   border: none;
   letter-spacing: 0.03em;
   font-weight: var(--weight-semibold);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .primary {
@@ -14,17 +17,19 @@
 }
 
 .primary:hover {
-  background: var(--color-orange);
+  background: var(--color-charcoal-light);
 }
 
 .secondary {
   background: transparent;
   color: var(--color-orange);
-  border: 1.5px solid var(--color-orange);
+  border: 2px solid var(--color-orange);
 }
 
 .secondary:hover {
   background: var(--color-deep-cream);
+  color: var(--color-charcoal-light);
+  border: 2px solid var(--color-charcoal-light);
 }
 
 .outline {

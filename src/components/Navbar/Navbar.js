@@ -32,13 +32,17 @@ export default function Navbar() {
           </div>
           <ul className={styles.links}>
             <li>
-              <Link href="/about" onClick={closeAll}>
+              <Link href="/about" className={styles.navLink} onClick={closeAll}>
                 About
               </Link>
             </li>
             <li className={styles.dropdownParent}>
               <div className={styles.dropdownTriggerWrap}>
-                <Link href="/resources" onClick={closeAll}>
+                <Link
+                  href="/resources"
+                  className={styles.navLink}
+                  onClick={closeAll}
+                >
                   Resources
                 </Link>
                 <button
@@ -75,27 +79,38 @@ export default function Navbar() {
               )}
             </li>
             <li>
-              <Link href="/blog" onClick={closeAll}>
+              <Link href="/blog" className={styles.navLink} onClick={closeAll}>
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/grants" onClick={closeAll}>
+              <Link
+                href="/grants"
+                className={styles.navLink}
+                onClick={closeAll}
+              >
                 Grants
               </Link>
             </li>
 
             <li>
-              <Link href="/contact" onClick={closeAll}>
+              <Link
+                href="/contact"
+                className={styles.navLink}
+                onClick={closeAll}
+              >
                 Contact
               </Link>
             </li>
             <li>
-              <Link href="/donate" onClick={closeAll}>
-                <Button variant="primary" size="nav">
-                  Donate
-                </Button>
-              </Link>
+              <Button
+                variant="primary"
+                size="nav"
+                href="/donate"
+                onClick={closeAll}
+              >
+                Donate
+              </Button>
             </li>
           </ul>
         </div>

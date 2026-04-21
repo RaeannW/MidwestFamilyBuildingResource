@@ -40,13 +40,15 @@ export default function HeroSection() {
         </h1>
         <p className={styles.subtext}>{heroContent.subtext}</p>
         <div className={styles.buttons}>
-          <Link href={heroContent.primaryCta.href}>
-            <Button variant="primary" size="large">
-              {heroContent.primaryCta.label}
-            </Button>
-          </Link>
+          <Button
+            variant="primary"
+            size="large"
+            href={heroContent.primaryCta.href}
+          >
+            {heroContent.primaryCta.label}
+          </Button>
           <Link href={heroContent.secondaryCta.href}>
-            <Button variant="outline" size="large">
+            <Button variant="secondary" size="large">
               {heroContent.secondaryCta.label}
             </Button>
           </Link>
@@ -56,6 +58,7 @@ export default function HeroSection() {
             src={heroContent.image.src}
             alt={heroContent.image.alt}
             fill
+            sizes="100vw"
             style={{ objectFit: "cover" }}
             priority
           />

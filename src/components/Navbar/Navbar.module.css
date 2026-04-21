@@ -32,15 +32,15 @@
   align-items: center;
 }
 
-.links a {
+.navLink {
   text-decoration: none;
   color: inherit;
   font-size: var(--text-lg);
   font-weight: var(--weight-semibold);
 }
 
-.links a:hover {
-  text-decoration: underline;
+.navLink:hover {
+  color: var(--color-orange);
 }
 
 .dropdownParent {
