@@ -1,3 +1,4 @@
+import BlogPreviewSection from "@/components/BlogPreviewSection/BlogPreviewSection";
 import styles from "./page.module.css";
 
 import GrantProgressSection from "@/components/GrantProgressSection/GrantProgressSection";
@@ -27,6 +28,7 @@ export default function Home() {
         <GrantProgressSection />
         <PathsSection />
         <SplitSection {...stateResourcesContent} />
+        <BlogPreviewSection />
       </main>
     </div>
   );
