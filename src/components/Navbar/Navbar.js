@@ -20,7 +20,7 @@ export default function Navbar() {
       <Container>
         <div className={styles.navbarInner}>
           <div className={styles.logoWrapper}>
-            <Link href="/" onClick={closeAll}>
+            <Link href="/" onClick={closeAll} className={styles.logoLink}>
               <Image
                 src="/images/logos/horizontalLogoDark.svg"
                 alt="Midwest Family Building Resource"

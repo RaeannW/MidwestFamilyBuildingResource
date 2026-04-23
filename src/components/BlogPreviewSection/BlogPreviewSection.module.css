@@ -1,0 +1,58 @@
+.section {
+  position: relative;
+  padding: 4rem 0 4rem;
+  background: var(--color-white);
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.headline {
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-extrabold);
+  color: var(--color-charcoal);
+  letter-spacing: -0.02em;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.bottomBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: var(--color-orange);
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon img {
+    width: 100%;
+    height: 100%;
+  }
+}
