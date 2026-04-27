@@ -1,10 +1,32 @@
 import BlogPreviewSection from "@/components/BlogPreviewSection/BlogPreviewSection";
-import styles from "./page.module.css";
 
 import GrantProgressSection from "@/components/GrantProgressSection/GrantProgressSection";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import PathsSection from "@/components/PathsSection/PathsSection";
 import SplitSection from "@/components/SplitSection/SplitSection";
+
+const heroContent = {
+  eyebrow: "Resources for every path",
+  headlineLine1: "Family building,",
+  headlineLine2: "without the",
+  headlineAccent: "guesswork.",
+  subtext:
+    "Honest cost guides, local provider directories, and direct micro-grants for Missouri and Illinois families.",
+  primaryCta: {
+    label: "Explore resources",
+    href: "/resources",
+  },
+  secondaryCta: {
+    label: "Support a family",
+    href: "/donate",
+  },
+  image: {
+    src: "/images/heros/handsFeetFamily.jpg",
+    alt: "Family at home",
+  },
+  background: "cream",
+  align: "center",
+};
 
 const stateResourcesContent = {
   eyebrow: "State-specific guides",
@@ -22,14 +44,12 @@ const stateResourcesContent = {
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main>
-        <HeroSection />
-        <GrantProgressSection />
-        <PathsSection />
-        <SplitSection {...stateResourcesContent} />
-        <BlogPreviewSection />
-      </main>
-    </div>
+    <main>
+      <HeroSection {...heroContent} />
+      <GrantProgressSection />
+      <PathsSection />
+      <SplitSection {...stateResourcesContent} />
+      <BlogPreviewSection />
+    </main>
   );
 }

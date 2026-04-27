@@ -3,7 +3,7 @@
 }
 
 .cream {
-  background: var(--color-cream);
+  background: var(--color-deep-cream);
 }
 
 .white {
@@ -76,7 +76,7 @@
 }
 
 .charcoal .text {
-  color: #b8b8b6;
+  color: var(--color-tan);
 }
 
 .buttons {

@@ -8,6 +8,7 @@
   --color-charcoal: #2c2c2a;
   --color-charcoal-light: #3a3a38;
   --color-white: #ffffff;
+  --color-tan: #b8b8b6;
 
   /* Text colors */
   --color-text-primary: #2c2c2a;
@@ -60,6 +61,9 @@
   --weight-semibold: 600;
   --weight-bold: 700;
   --weight-extrabold: 800;
+
+  --container-max: 1700px;
+  --container-padding: 2rem;
 }
 
 *,
