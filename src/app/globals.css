@@ -1,8 +1,6 @@
 :root {
   /* Brand colors */
   --color-orange: #e8622a;
-  --color-amber: #f5a623;
-  --color-warm-cream: #fff8f0;
   --color-deep-cream: #fdf3e7;
   --color-peach: #ffdbaf;
   --color-charcoal: #2c2c2a;
@@ -62,7 +60,7 @@
   --weight-bold: 700;
   --weight-extrabold: 800;
 
-  --container-max: 1700px;
+  --container-max: 1400px;
   --container-padding: 2rem;
 }
 

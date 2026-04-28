@@ -1,5 +1,7 @@
 import LeftContentBlock from "@/components/LeftContentBlock/LeftContentBlock";
 import HeroSection from "@/components/HeroSection/HeroSection";
+import ValuesSection from "@/components/ValuesSection/ValuesSection";
+import CenteredContentBlock from "@/components/CenteredContentBlock/CenteredContentBlock";
 
 const aboutHeroContent = {
   eyebrow: "Our story",
@@ -25,11 +27,37 @@ const ourStoryContent = {
   background: "cream",
 };
 
+const nonProfitStatus = {
+  eyebrow: "Transparency Matters",
+  headline: "Nonprofit status update.",
+  paragraphs: [
+    "Midwest Family Building Resource is in the process of establishing 501(c)(3) nonprofit status. Donations are not currently tax-deductible, and we disclose this on every fundraising page.",
+    "All grant funds during our pilot round are disbursed directly to licensed family-building service providers on behalf of selected families — never as cash to individuals.",
+  ],
+  background: "charcoal",
+};
+
+const supportContent = {
+  eyebrow: "Ready to help",
+  headline: "Support the mission.",
+  paragraphs: [
+    "Help us keep resources free, expand to more states, and fund more families.",
+  ],
+  buttons: [
+    { label: "Donate to grant fund", href: "/donate", variant: "primary" },
+    { label: "Explore resources", href: "/resources", variant: "secondary" },
+  ],
+  background: "cream",
+};
+
 export default function AboutPage() {
   return (
     <main>
       <HeroSection {...aboutHeroContent} />
       <LeftContentBlock {...ourStoryContent} />
+      <ValuesSection />
+      <LeftContentBlock {...nonProfitStatus} />
+      <CenteredContentBlock {...supportContent} />
     </main>
   );
 }
