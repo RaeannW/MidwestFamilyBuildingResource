@@ -3,7 +3,10 @@
 import { getCategoryGroupsWithCounts } from "@/content/blog";
 import styles from "./BlogCategorySidebar.module.css";
 
-export default function BlogCategorySidebar({ activeCategory = "all" }) {
+export default function BlogCategorySidebar({
+  activeCategory = "all",
+  onCategoryChange,
+}) {
   const groups = getCategoryGroupsWithCounts();
 
   return (
@@ -19,6 +22,7 @@ export default function BlogCategorySidebar({ activeCategory = "all" }) {
                   className={`${styles.item} ${
                     activeCategory === cat.slug ? styles.active : ""
                   }`}
+                  onClick={() => onCategoryChange(cat.slug)}
                 >
                   {cat.label} ({cat.count})
                 </li>
