@@ -1,11 +1,17 @@
+"use client";
+import { useState } from "react";
 import Container from "@/components/Container/Container";
-// import BlogCard from "@/components/BlogCard/BlogCard";
-import { featuredBlogPost, nonFeaturedBlogPosts } from "@/content/blog";
+import {
+  blogPosts,
+  featuredBlogPost,
+  nonFeaturedBlogPosts,
+} from "@/content/blog";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import FeaturedBlogCard from "@/components/FeaturedBlogCard/FeaturedBlogCard";
 import styles from "./page.module.css";
 import BlogListItem from "@/components/BlogListItem/BlogListItem";
 import BlogCategorySidebar from "@/components/BlogCategorySidebar/BlogCategorySidebar";
+import Button from "@/components/Button/Button";
 
 const blogContent = {
   eyebrow: "From our team",
@@ -17,6 +23,13 @@ const blogContent = {
 };
 
 export default function BlogIndex() {
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  const filteredPosts =
+    activeCategory === "all"
+      ? nonFeaturedBlogPosts
+      : blogPosts.filter((post) => post.tags?.includes(activeCategory));
+
   return (
     <main>
       <HeroSection {...blogContent} />
@@ -32,11 +45,36 @@ export default function BlogIndex() {
       <section className={styles.listSection}>
         <Container>
           <div className={styles.layout}>
-            <BlogCategorySidebar activeCategory="all" />
+            <BlogCategorySidebar
+              activeCategory={activeCategory}
+              onCategoryChange={setActiveCategory}
+            />
             <div className={styles.list}>
-              {nonFeaturedBlogPosts.map((post) => (
-                <BlogListItem key={post.slug} {...post} />
-              ))}
+              {activeCategory !== "all" && (
+                <div className={styles.filterStatus}>
+                  <span>
+                    Showing {filteredPosts.length}{" "}
+                    {filteredPosts.length === 1 ? "post" : "posts"}
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="small"
+                    onClick={() => setActiveCategory("all")}
+                  >
+                    Clear filter ×
+                  </Button>
+                </div>
+              )}
+
+              {filteredPosts.length > 0 ? (
+                filteredPosts.map((post) => (
+                  <BlogListItem key={post.slug} {...post} />
+                ))
+              ) : (
+                <p className={styles.empty}>
+                  No posts in this category yet. Check back soon.
+                </p>
+              )}
             </div>
           </div>
         </Container>
