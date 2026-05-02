@@ -3,6 +3,31 @@ import Container from "@/components/Container/Container";
 import Button from "@/components/Button/Button";
 import styles from "./HeroSection.module.css";
 
+type ButtonItem = {
+  label: string;
+  href: string;
+  variant?: "primary" | "secondary" | "outline" | "amber" | "dark";
+  size?: "small" | "medium" | "large" | "nav";
+};
+
+type ImageData = {
+  src: string;
+  alt: string;
+};
+
+type HeroSectionProps = {
+  eyebrow?: string;
+  headlineLine1: string;
+  headlineLine2?: string;
+  headlineAccent?: string;
+  subtext?: string;
+  primaryCta?: ButtonItem;
+  secondaryCta?: ButtonItem;
+  image: ImageData;
+  background?: "cream" | "creamLight" | "white" | "charcoal";
+  align?: "left" | "center";
+};
+
 export default function HeroSection({
   eyebrow,
   headlineLine1,
@@ -14,7 +39,7 @@ export default function HeroSection({
   image,
   background = "cream",
   align = "left",
-}) {
+}: HeroSectionProps) {
   const sectionClass = `${styles.hero} ${styles[background]} ${styles[align]}`;
 
   return (

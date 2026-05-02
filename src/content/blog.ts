@@ -1,4 +1,29 @@
-export const blogPosts = [
+export type BlogPost = {
+  slug: string;
+  category: string;
+  tags: string[];
+  title: string;
+  excerpt: string;
+  image: string;
+  imageAlt: string;
+  publishedDate: string;
+  readTime: string;
+  author: string;
+  featured: boolean;
+  content: string[];
+};
+
+type BlogCategory = {
+  label: string;
+  slug: string;
+};
+
+type BlogCategoryGroup = {
+  heading: string;
+  categories: BlogCategory[];
+};
+
+export const blogPosts: BlogPost[] = [
   {
     slug: "ivf-cost-missouri-2025",
     category: "IVF · Cost guide",
@@ -58,7 +83,7 @@ export const blogPosts = [
   },
 ];
 
-export const blogCategoryGroups = [
+export const blogCategoryGroups: BlogCategoryGroup[] = [
   {
     heading: "Paths",
     categories: [

@@ -1,6 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { BlogPost } from "@/content/blog";
 import styles from "./BlogListItem.module.css";
+
+type BlogListItemProps = Pick<
+  BlogPost,
+  | "slug"
+  | "category"
+  | "title"
+  | "excerpt"
+  | "image"
+  | "imageAlt"
+  | "publishedDate"
+  | "readTime"
+>;
 
 export default function BlogListItem({
   slug,
@@ -11,7 +24,7 @@ export default function BlogListItem({
   imageAlt,
   publishedDate,
   readTime,
-}) {
+}: BlogListItemProps) {
   return (
     <Link href={`/blog/${slug}`} className={styles.item}>
       <div className={`${styles.imageWrap} image-overlay`}>

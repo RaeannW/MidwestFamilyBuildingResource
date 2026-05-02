@@ -1,6 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { BlogPost } from "@/content/blog";
 import styles from "./FeaturedBlogCard.module.css";
+
+type FeaturedBlogCardProps = Pick<
+  BlogPost,
+  | "slug"
+  | "title"
+  | "excerpt"
+  | "image"
+  | "imageAlt"
+  | "publishedDate"
+  | "readTime"
+> & {
+  theme?: "light" | "dark";
+};
 
 export default function FeaturedBlogCard({
   slug,
@@ -11,7 +25,7 @@ export default function FeaturedBlogCard({
   publishedDate,
   readTime,
   theme = "light",
-}) {
+}: FeaturedBlogCardProps) {
   return (
     <Link href={`/blog/${slug}`} className={`${styles.card} ${styles[theme]}`}>
       <div className={`${styles.imageWrap} image-overlay`}>

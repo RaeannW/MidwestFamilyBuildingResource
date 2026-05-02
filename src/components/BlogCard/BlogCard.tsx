@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { BlogPost } from "@/content/blog";
 import styles from "./BlogCard.module.css";
+
+type BlogCardProps = Pick<
+  BlogPost,
+  "slug" | "category" | "title" | "image" | "imageAlt"
+>;
 
 export default function BlogCard({
   slug,
@@ -8,8 +14,7 @@ export default function BlogCard({
   title,
   image,
   imageAlt,
-  href,
-}) {
+}: BlogCardProps) {
   return (
     <Link href={`/blog/${slug}`} className={styles.card}>
       <div className={`${styles.imageWrap} image-overlay`}>
