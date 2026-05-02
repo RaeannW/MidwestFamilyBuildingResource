@@ -17,7 +17,7 @@ type SplitSectionProps = {
   image: string;
   imageAlt: string;
   imagePosition: "right" | "left";
-  buttons?: ButtonItem[];
+  buttons?: readonly ButtonItem[];
   background?: "cream" | "creamLight" | "white" | "charcoal";
 };
 

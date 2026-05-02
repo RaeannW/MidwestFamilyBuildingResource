@@ -1,11 +1,11 @@
 import BlogPreviewSection from "@/components/BlogPreviewSection/BlogPreviewSection";
-
+import type { ComponentProps } from "react";
 import GrantProgressSection from "@/components/GrantProgressSection/GrantProgressSection";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import PathsSection from "@/components/PathsSection/PathsSection";
 import SplitSection from "@/components/SplitSection/SplitSection";
 
-const heroContent = {
+const heroContent: ComponentProps<typeof HeroSection> = {
   eyebrow: "Resources for every path",
   headlineLine1: "Family building,",
   headlineLine2: "without the",
@@ -28,7 +28,7 @@ const heroContent = {
   align: "center",
 };
 
-const stateResourcesContent = {
+const stateResourcesContent: ComponentProps<typeof SplitSection> = {
   eyebrow: "State-specific guides",
   headline: "Find resources in your state.",
   text: "IVF clinics, adoption agencies, foster contacts, and cost calculators organized by state. Illinois residents also have a fertility insurance mandate we break down clearly.",

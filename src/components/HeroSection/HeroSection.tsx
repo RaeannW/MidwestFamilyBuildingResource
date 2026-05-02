@@ -23,7 +23,7 @@ type HeroSectionProps = {
   subtext?: string;
   primaryCta?: ButtonItem;
   secondaryCta?: ButtonItem;
-  image: ImageData;
+  image?: ImageData;
   background?: "cream" | "creamLight" | "white" | "charcoal";
   align?: "left" | "center";
 };
