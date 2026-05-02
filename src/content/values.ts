@@ -1,4 +1,10 @@
-export const values = [
+export type Value = {
+  icon: string;
+  title: string;
+  description: string;
+};
+
+export const values: Value[] = [
   {
     icon: "images/icons/Neutral.svg",
     title: "Neutral",

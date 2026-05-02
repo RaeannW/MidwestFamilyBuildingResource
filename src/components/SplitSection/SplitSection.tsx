@@ -3,6 +3,24 @@ import Container from "@/components/Container/Container";
 import Button from "@/components/Button/Button";
 import styles from "./SplitSection.module.css";
 
+type ButtonItem = {
+  label: string;
+  href: string;
+  variant?: "primary" | "secondary" | "outline" | "amber" | "dark";
+  size?: "small" | "medium" | "large" | "nav";
+};
+
+type SplitSectionProps = {
+  eyebrow?: string;
+  headline: string;
+  text: string;
+  image: string;
+  imageAlt: string;
+  imagePosition: "right" | "left";
+  buttons?: ButtonItem[];
+  background?: "cream" | "creamLight" | "white" | "charcoal";
+};
+
 export default function SplitSection({
   eyebrow,
   headline,
@@ -12,7 +30,7 @@ export default function SplitSection({
   imagePosition = "right",
   buttons = [],
   background = "cream",
-}) {
+}: SplitSectionProps) {
   const sectionClass = `${styles.section} ${styles[background]}`;
   const gridClass = `${styles.grid} ${imagePosition === "left" ? styles.imageLeft : styles.imageRight}`;
 

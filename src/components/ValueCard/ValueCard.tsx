@@ -1,7 +1,14 @@
 import Image from "next/image";
+import type { Value } from "@/content/values";
 import styles from "./ValueCard.module.css";
 
-export default function ValueCard({ icon, title, description }) {
+type ValueCardProps = Value;
+
+export default function ValueCard({
+  icon,
+  title,
+  description,
+}: ValueCardProps) {
   return (
     <div className={styles.card}>
       <div className={styles.iconWrap}>

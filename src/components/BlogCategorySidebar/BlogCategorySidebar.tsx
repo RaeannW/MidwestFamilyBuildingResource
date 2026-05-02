@@ -3,10 +3,15 @@
 import { getCategoryGroupsWithCounts } from "@/content/blog";
 import styles from "./BlogCategorySidebar.module.css";
 
+type BlogCategorySidebarProps = {
+  activeCategory?: string;
+  onCategoryChange: (slug: string) => void;
+};
+
 export default function BlogCategorySidebar({
   activeCategory = "all",
   onCategoryChange,
-}) {
+}: BlogCategorySidebarProps) {
   const groups = getCategoryGroupsWithCounts();
 
   return (

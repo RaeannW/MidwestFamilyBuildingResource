@@ -1,4 +1,13 @@
-export const paths = [
+export type Path = {
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  href: string;
+};
+
+export const paths: Path[] = [
   {
     slug: "ivf",
     title: "IVF",

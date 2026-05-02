@@ -1,4 +1,7 @@
+import type { GrantData } from "@/content/grantData";
 import styles from "./GrantProgressCard.module.css";
+
+type GrantProgressCardProps = GrantData;
 
 export default function GrantProgressCard({
   raised,
@@ -6,7 +9,7 @@ export default function GrantProgressCard({
   families,
   perGrant,
   awardDate,
-}) {
+}: GrantProgressCardProps) {
   const percent = Math.round((raised / goal) * 100);
 
   return (

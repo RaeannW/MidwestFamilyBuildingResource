@@ -1,14 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Path } from "@/content/paths";
 import styles from "./PathCard.module.css";
 
+type PathCardProps = Pick<
+  Path,
+  "title" | "description" | "image" | "imageAlt" | "href"
+>;
 export default function PathCard({
   title,
   description,
   image,
   imageAlt,
   href,
-}) {
+}: PathCardProps) {
   return (
     <Link href={href} className={styles.card}>
       <div className={`${styles.imageWrap} image-overlay`}>

@@ -1,14 +1,29 @@
 import Container from "@/components/Container/Container";
 import Button from "@/components/Button/Button";
-import styles from "./CenteredContentBlock.module.css";
+import styles from "./LeftContentBlock.module.css";
 
-export default function CenteredContentBlock({
+type ButtonItem = {
+  label: string;
+  href: string;
+  variant?: "primary" | "secondary" | "outline" | "amber" | "dark";
+  size?: "small" | "medium" | "large" | "nav";
+};
+
+type LeftContentBlockProps = {
+  eyebrow?: string;
+  headline?: string;
+  paragraphs?: string[];
+  buttons?: ButtonItem[];
+  background?: "cream" | "creamLight" | "white" | "charcoal";
+};
+
+export default function LeftContentBlock({
   eyebrow,
   headline,
   paragraphs = [],
   buttons = [],
   background = "cream",
-}) {
+}: LeftContentBlockProps) {
   const sectionClass = `${styles.section} ${styles[background]}`;
 
   return (
