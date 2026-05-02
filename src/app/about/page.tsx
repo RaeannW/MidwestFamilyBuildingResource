@@ -1,9 +1,10 @@
+import type { ComponentProps } from "react";
 import LeftContentBlock from "@/components/LeftContentBlock/LeftContentBlock";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import ValuesSection from "@/components/ValuesSection/ValuesSection";
 import CenteredContentBlock from "@/components/CenteredContentBlock/CenteredContentBlock";
 
-const aboutHeroContent = {
+const aboutHeroContent: ComponentProps<typeof HeroSection> = {
   eyebrow: "Our story",
   headlineLine1: "The resource we wished",
   headlineAccent: "existed.",
@@ -16,7 +17,7 @@ const aboutHeroContent = {
   align: "center",
 };
 
-const ourStoryContent = {
+const ourStoryContent: ComponentProps<typeof LeftContentBlock> = {
   eyebrow: "Our story",
   headline: "Why we built this.",
   paragraphs: [
@@ -27,8 +28,8 @@ const ourStoryContent = {
   background: "cream",
 };
 
-const nonProfitStatus = {
-  eyebrow: "Transparency Matters",
+const nonProfitStatus: ComponentProps<typeof LeftContentBlock> = {
+  eyebrow: "Transparency matters",
   headline: "Nonprofit status update.",
   paragraphs: [
     "Midwest Family Building Resource is in the process of establishing 501(c)(3) nonprofit status. Donations are not currently tax-deductible, and we disclose this on every fundraising page.",
@@ -37,7 +38,7 @@ const nonProfitStatus = {
   background: "charcoal",
 };
 
-const supportContent = {
+const supportContent: ComponentProps<typeof CenteredContentBlock> = {
   eyebrow: "Ready to help",
   headline: "Support the mission.",
   paragraphs: [

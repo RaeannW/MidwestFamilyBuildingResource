@@ -1,5 +1,6 @@
 import { Nunito_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
+import type { Metadata } from "next";
 import "./globals.css";
 
 const nunitoSans = Nunito_Sans({
@@ -9,13 +10,17 @@ const nunitoSans = Nunito_Sans({
   display: "swap",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Midwest Family Building Resource",
   description:
     "Free, unbiased resources and micro-grants for families in Missouri and Illinois.",
 };
 
-export default function RootLayout({ children }) {
+type RootLayoutProps = {
+  children: React.ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={nunitoSans.variable}>
       <body>

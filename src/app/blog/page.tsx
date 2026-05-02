@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, type ComponentProps } from "react";
 import Container from "@/components/Container/Container";
 import {
   blogPosts,
@@ -13,7 +13,7 @@ import BlogListItem from "@/components/BlogListItem/BlogListItem";
 import BlogCategorySidebar from "@/components/BlogCategorySidebar/BlogCategorySidebar";
 import Button from "@/components/Button/Button";
 
-const blogContent = {
+const blogContent: ComponentProps<typeof HeroSection> = {
   eyebrow: "From our team",
   headlineLine1: "All blog posts",
   subtext:

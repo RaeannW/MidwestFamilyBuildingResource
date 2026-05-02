@@ -1,14 +1,19 @@
-import React from "react";
 import Container from "@/components/Container/Container";
-import { featuredBlogPosts } from "@/content/blog";
+import { blogPosts } from "@/content/blog";
 import { notFound } from "next/navigation";
 
-export default async function BlogPost({ params }) {
+type BlogPostPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function BlogPost({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = featuredBlogPosts.find((p) => p.slug === slug);
+  const post = blogPosts.find((p) => p.slug === slug);
+
   if (!post) {
-    notFound();
+    return notFound();
   }
+
   return (
     <main>
       <Container>
