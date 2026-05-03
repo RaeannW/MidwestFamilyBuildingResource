@@ -10,8 +10,8 @@ const aboutHeroContent: ComponentProps<typeof HeroSection> = {
   headlineAccent: "existed.",
   subtext: "Built by and for families navigating their own path to parenthood.",
   image: {
-    src: "/images/heros/handsFeetFamily.jpg",
-    alt: "photo",
+    src: "/images/heros/hero.jpg",
+    alt: "family in the midwest",
   },
   background: "charcoal",
   align: "center",

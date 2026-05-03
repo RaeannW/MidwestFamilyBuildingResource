@@ -21,8 +21,8 @@ const heroContent: ComponentProps<typeof HeroSection> = {
     href: "/donate",
   },
   image: {
-    src: "/images/heros/handsFeetFamily.jpg",
-    alt: "Family at home",
+    src: "/images/heros/hero.jpg",
+    alt: "Family in the midwest",
   },
   background: "cream",
   align: "center",
