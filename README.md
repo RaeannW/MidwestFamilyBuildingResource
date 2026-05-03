@@ -2,6 +2,9 @@
 
 **Midwest Family Building Resource is a portfolio project exploring what a future nonprofit could look like. It is designed to provide neutral, non-religious, apolitical, evidence-based information about all paths to parenthood; including IVF, adoption, fostering, surrogacy, and traditional childbirth, along with the concept of a micro-grant program to support families.**
 
+Live Demo:
+https://midwest-family-building-resource.vercel.app/
+
 ---
 
 While this is not currently an active nonprofit or fundraising organization, it represents a real-world concept that may be developed further in the future.
