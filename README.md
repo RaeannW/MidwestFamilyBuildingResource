@@ -5,6 +5,8 @@
 Live Demo:
 https://midwest-family-building-resource.vercel.app/
 
+[View the Figma Board with Wireframes, Branding, and Design Inspo](https://www.figma.com/design/dBDNLnHJdayaCuox4Ah23L/Non-Profit-Planning?node-id=0-1&t=LsBONaMNeu4mP3Fg-1)
+
 ---
 
 While this is not currently an active nonprofit or fundraising organization, it represents a real-world concept that may be developed further in the future.
